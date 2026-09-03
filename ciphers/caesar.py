@@ -56,41 +56,42 @@ def display_result(original, result, shift, operation):
     print("Shift:", shift)
 
 #=======================================================================================#
-
-while True:
-    print()
-    print("=== Caesar Cipher ===")
-    print("1) Encrypt")
-    print("2) Decrypt")
-    print("I) Info")
-    print("E) Exit") 
-
-    choice = input("Enter your choice: ")
-    choice = choice.lower()
-
-    if choice == "1":
-        text = input("Enter text you would like to encrypt: ")
-        shift = get_shift()
-        
-        result = crypt_text(text, shift)
-
-        display_result(text, result, shift, "Encrypted")
-
-    elif choice == "2":
-        text = input("Enter encrypted text you would like to decrypt: ")
-        shift = get_shift()
-
-        result = crypt_text(text, -shift)
-
-        display_result(text, result, shift, "Decrypted")
-
-    elif choice == "i":
-        info()
+def caesar_menu():
+    while True:
         print()
-        input("Press Enter to continue...")
+        print("=== Caesar Cipher ===")
+        print("1) Encrypt")
+        print("2) Decrypt")
+        print("I) Info")
+        print("E) Exit") 
 
-    elif choice == "e":
-        break
+        choice = input("Enter your choice: ")
+        choice = choice.lower()
 
-    else:
-        print("Invalid choice. Try again.")
+        if choice == "1":
+            text = input("Enter text you would like to encrypt: ")
+            shift = get_shift()
+            
+            result = crypt_text(text, shift)
+
+            display_result(text, result, shift, "Encrypted")
+
+        elif choice == "2":
+            text = input("Enter encrypted text you would like to decrypt: ")
+            shift = get_shift()
+
+            result = crypt_text(text, -shift)
+
+            display_result(text, result, shift, "Decrypted")
+
+        elif choice == "i":
+            info()
+            print()
+            input("Press Enter to continue...")
+
+        elif choice == "e":
+            print()
+            break
+
+        else:
+            print("Invalid choice. Try again.")

@@ -1,6 +1,11 @@
+from ciphers.caesar import caesar_menu 
+#this loads the entire caesar.py since
+#one function from it is needed and therefore 
+#all the functions in caesar.py can interract with each other.
+
 def display_menu():
     print("---- Menu ----")
-    print("1) Choice 1")
+    print("1) Caesar cipher")
     print("2) Choice 2")
     print("3) Choice 3")
     print("Q) Quit.")
@@ -13,8 +18,7 @@ def main():
         print()
 
         if choice == "1":
-            print("Choice one")
-            print()
+            caesar_menu()
 
         elif choice == "2":
             print("Choice two")
