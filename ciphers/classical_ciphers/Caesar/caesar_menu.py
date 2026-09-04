@@ -33,6 +33,7 @@ def caesar_menu():
 
         choice = input("Enter your choice: ")
         choice = choice.lower()
+        print()
 
         if choice == "1":
             caesar_numeric_shift_menu()
