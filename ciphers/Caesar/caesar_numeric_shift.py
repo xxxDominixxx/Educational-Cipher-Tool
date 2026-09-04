@@ -1,12 +1,8 @@
-alphabet_uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
-alphabet_lowercase = [letter.lower() for letter in alphabet_uppercase]
+from tools.terminal_cleaner import clear_terminal
 
-#Function used to print information about the cypher
-def info():
-    print()
-    print("The Caesar cipher is a simple way to encrypt messages.")
-    print("It shifts each letter a set number of places in the alphabet.")
-    print("It is named after Julius Caesar, who used it to encode messages in his correspondence.")
+alphabet_uppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M",
+                      "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
+alphabet_lowercase = [letter.lower() for letter in alphabet_uppercase]
 
 #Function that acquires the amount of positions that the letters will shift
 def get_shift():
@@ -56,14 +52,13 @@ def display_result(original, result, shift, operation):
     print("Shift:", shift)
 
 #=======================================================================================#
-def caesar_menu():
+def caesar_numeric_shift_menu():
     while True:
         print()
-        print("=== Caesar Cipher ===")
+        print("=== Caesar Numeric Shift ===")
         print("1) Encrypt")
         print("2) Decrypt")
-        print("I) Info")
-        print("E) Exit") 
+        print("R) Return") 
 
         choice = input("Enter your choice: ")
         choice = choice.lower()
@@ -84,13 +79,8 @@ def caesar_menu():
 
             display_result(text, result, shift, "Decrypted")
 
-        elif choice == "i":
-            info()
-            print()
-            input("Press Enter to continue...")
-
-        elif choice == "e":
-            print()
+        elif choice == "r":
+            clear_terminal()
             break
 
         else:
