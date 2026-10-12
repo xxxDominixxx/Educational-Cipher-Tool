@@ -1,9 +1,9 @@
-from ciphers.classical_ciphers.Caesar.caesar_menu import caesar_menu
-from ciphers.classical_ciphers.Atbash import atbash_menu
-from ciphers.classical_ciphers.Vigenere import vigenere_menu
-from ciphers.classical_ciphers.Affine import affine_menu
-from ciphers.classical_ciphers.Rail_Fence import rail_fence_menu
-from ciphers.classical_ciphers.Columnar_Transposition import columnar_transposition_menu
+from classical_cryptography.classical_ciphers.Caesar.caesar_menu import caesar_menu
+from classical_cryptography.classical_ciphers.Atbash import atbash_menu
+from classical_cryptography.classical_ciphers.Vigenere import vigenere_menu
+from classical_cryptography.classical_ciphers.Affine import affine_menu
+from classical_cryptography.classical_ciphers.Rail_Fence import rail_fence_menu
+from classical_cryptography.classical_ciphers.Columnar_Transposition import columnar_transposition_menu
 from tools.terminal_cleaner import clear_terminal
 
 def info():

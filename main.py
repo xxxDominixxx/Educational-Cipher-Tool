@@ -1,10 +1,11 @@
-from ciphers.classical_ciphers_menu import classical_ciphers_menu
+from classical_cryptography.classical_ciphers_menu import classical_ciphers_menu
+from modern_cryptography.modern_cryptography_menu import modern_cryptography_menu
 from tools.terminal_cleaner import clear_terminal
 
 def display_menu():
     print("---- Menu ----")
-    print("1) Classical ciphers")
-    print("2) Other ciphers")
+    print("1) Classical Cryptography")
+    print("2) Modern Cryptography")
     print("Q) Quit.")
 
 def main():
@@ -20,7 +21,7 @@ def main():
 
         elif choice == "2":
             clear_terminal()
-            print("Other cipher")   #Replace later when another function is created
+            modern_cryptography_menu()
 
         elif choice == "q":
             clear_terminal()

@@ -59,3 +59,25 @@ I now have six classical ciphers in the project, so I decided to store them all 
 This also makes the project structure more organised and gives me a clearer foundation for adding other types of ciphers later.
 
 ### ===============================================================================================
+
+### Fourth Entry — 2026-10-12
+
+After some time away from actively developing this project, I continued working on it today. I have not abandoned this project or the other projects I am working on. There are simply other things in my life that sometimes require more of my attention.
+
+Between university, studying and assignments, job hunting, helping at home, taking care of family members, and keeping up with my responsibilities, hobbies, relationships, church, volunteering, and other parts of my life, working on this project cannot always be my highest priority. Nevertheless, I still want to continue developing it because I am genuinely interested in cryptography and want to see how far I can take this project while learning along the way.
+
+Today, I decided to reorganise the project further to make room for more advanced cryptographic methods. As the project was growing, I felt that keeping everything under the same structure would eventually become difficult to manage. I therefore separated the classical cryptography scripts into a dedicated `classical_cryptography` folder and introduced a new `modern_cryptography` folder. This gives the project a clearer structure and makes it easier to distinguish between classical ciphers and modern encryption methods.
+
+I then started implementing **AES (Advanced Encryption Standard)** as part of my first cryptography lab. I implemented AES in CTR mode, using a password-derived key generated with PBKDF2-HMAC-SHA256. I also added HMAC-SHA256 to verify the integrity of the decrypted message and detect incorrect passwords or modified data. The implementation supports encrypting and decrypting files, and I added a menu that allows the user to test the functionality directly through the program.
+
+After completing the AES implementation, I moved on to my second cryptography lab, which focused on **RSA and hybrid encryption**. I implemented RSA key generation with a password-protected private key and a corresponding public key. I then added digital signatures using RSA-PSS and SHA-256, allowing files to be signed and their signatures verified.
+
+I also implemented hybrid encryption by combining AES-256 in CTR mode with RSA-OAEP. Instead of encrypting an entire file with RSA, the program generates a random AES session key to encrypt the file and then encrypts that session key using the RSA public key. This allowed me to explore how symmetric and asymmetric cryptography can work together.
+
+Finally, I combined these components into an integrated workflow that signs and encrypts a file, then decrypts it and verifies its signature before accepting the recovered content. I tested the workflow successfully and modified the encrypted data to confirm that the program rejected the corrupted message. I also updated `.gitignore` to exclude the private RSA key and generated encryption artifacts from the repository.
+
+This was an important step in the development of the project. I now have six classical ciphers alongside implementations of AES encryption, RSA key management, hybrid encryption, and digital signatures. More importantly, I have gained a better understanding of how these different cryptographic techniques complement each other and why encryption and integrity verification serve different purposes.
+
+There are still improvements to make, particularly regarding authenticated encryption and separating the sender's signing key from the recipient's encryption key. However, I now have a functional foundation for exploring these improvements and expanding the project further.
+
+### ============================================================================================

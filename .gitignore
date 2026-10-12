@@ -1,9 +1,23 @@
 # Python cache files
 __pycache__/
-*.pyc
+*.py[cod]
 
 # Environment variables / secrets
 .env
+.env.*
 
 # VS Code settings
 .vscode/
+
+# Generated AES output files
+modern_cryptography/aes/aes_files/encrypted_message.txt
+modern_cryptography/aes/aes_files/decrypted_message.txt
+
+# RSA private keys
+modern_cryptography/rsa/rsa_files/myPrivate.pem
+
+# Generated RSA encryption and signature files
+modern_cryptography/rsa/rsa_files/*.enc
+modern_cryptography/rsa/rsa_files/*.key
+modern_cryptography/rsa/rsa_files/*.sig
+modern_cryptography/rsa/rsa_files/*.dec
